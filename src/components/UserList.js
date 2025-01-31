@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import 'regenerator-runtime/runtime'
 
 function UserList() {
   const [users, setUsers] = useState([]);
