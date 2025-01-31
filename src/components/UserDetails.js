@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import 'regenerator-runtime/runtime'
 
 function UserDetails() {
   const { id } = useParams();
