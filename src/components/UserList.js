@@ -4,6 +4,7 @@ import 'regenerator-runtime/runtime'
 
 function UserList() {
   const [users, setUsers] = useState([]);
+  const [loading,setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchUsers() {
@@ -12,10 +13,13 @@ function UserList() {
       );
       const data = await response.json();
       setUsers(data);
+      setLoading(false)
     }
 
     fetchUsers();
   }, []);
+
+  if(loading)return(<h2>Loading...</h2>)
 
   return (
     <div>
