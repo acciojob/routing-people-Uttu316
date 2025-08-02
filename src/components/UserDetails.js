@@ -15,7 +15,10 @@ function UserDetails() {
       setUser(data);
     }
 
-    fetchUser();
+    
+setTimeout(()=>{
+fetchUser();
+},1000)
   }, [id]);
 
   if (!user) {
